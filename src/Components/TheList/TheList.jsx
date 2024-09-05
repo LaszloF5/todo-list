@@ -84,7 +84,7 @@ export default function TheList({
                 <img
                   className="handler-icons"
                   src="/Icons/delete.png"
-                  alt="delete"
+                  alt="delete icon"
                 />
               </button>
             </div>
