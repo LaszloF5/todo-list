@@ -1,0 +1,48 @@
+.li-style {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn-container {
+  margin-left: 10px;
+}
+
+.handler-icons {
+  width: 24px;
+  cursor: pointer;
+}
+
+.handler-btn {
+  padding: 0;
+  border-radius: 100%;
+  background-color: transparent;
+  border: none;
+}
+
+.handler-btn:first-child {
+  margin-right: 10px;
+}
+
+.form-modify-btn {
+  padding: 5px;
+  width: 100px;
+  background-color: #ffa07a;
+  border-color: #ffa07a;
+  border-radius: 5px;
+  cursor: pointer;
+  transform: scale(1);
+  transition-duration: 500ms;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.form-modify-btn:hover {
+  transform: scale(1.1);
+  transition-duration: 500ms;
+}
+
+.finishTask {
+  text-decoration: line-through;
+}

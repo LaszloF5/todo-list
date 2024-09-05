@@ -1,0 +1,35 @@
+.form-input {
+  margin: 0 10px;
+  padding: 5px;
+  text-align: center;
+  border: none;
+  border-bottom: 2px solid rgba(51, 51, 51, 0.6);
+  box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.1);
+  background-color: transparent;
+  font-size: 16px;
+}
+
+.form-input:active,
+.form-input:focus {
+  outline: none;
+  border: none;
+  border-bottom: 2px solid rgba(51, 51, 51, 0.6);
+}
+
+.form-submit-btn {
+  padding: 5px;
+  width: 50px;
+  background-color: #ffa07a;
+  border-color: #ffa07a;
+  border-radius: 5px;
+  cursor: pointer;
+  transform: scale(1);
+  transition-duration: 500ms;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.form-submit-btn:hover {
+  transform: scale(1.1);
+  transition-duration: 500ms;
+}
