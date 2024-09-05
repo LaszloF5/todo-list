@@ -52,7 +52,7 @@ export default function TheList({
           >
             <img
               className="handler-icons"
-              src="/Icons/done.png"
+              src={process.env.PUBLIC_URL + "/Icons/done.png"}
               alt="done"
               onClick={() => handleDone(task.id)}
             />
@@ -65,13 +65,13 @@ export default function TheList({
                 {basicState === task.id ? (
                   <img
                     className="handler-icons"
-                    src="/Icons/closeIcon.png"
+                    src={process.env.PUBLIC_URL + "/Icons/closeIcon.png"}
                     alt="Close icon"
                   />
                 ) : (
                   <img
                     className="handler-icons"
-                    src="/Icons/modify.png"
+                    src={process.env.PUBLIC_URL + "/Icons/modify.png"}
                     alt="Modify icon"
                   />
                 )}
@@ -83,7 +83,7 @@ export default function TheList({
               >
                 <img
                   className="handler-icons"
-                  src="/Icons/delete.png"
+                  src={process.env.PUBLIC_URL + "/Icons/delete.png"}
                   alt="delete icon"
                 />
               </button>
