@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./TheList.css";
 
 export default function TheList({
@@ -35,11 +35,20 @@ export default function TheList({
   };
 
   const handleDone = (id) => {
-    setIsDone((prevIsDone) => ({
-      ...prevIsDone,
-      [id]: !prevIsDone[id],
-    }));
+    const updatedIsDone = {
+      ...isDone,
+      [id]: !isDone[id],
+    };
+    setIsDone(updatedIsDone);
+    localStorage.setItem("isDone", JSON.stringify(updatedIsDone));
   };
+
+  useEffect(() => {
+    const savedIsDone = localStorage.getItem("isDone");
+    if (savedIsDone) {
+      setIsDone(JSON.parse(savedIsDone));
+    }
+  }, []);
 
   return (
     <>

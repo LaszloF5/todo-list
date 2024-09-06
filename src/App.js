@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Form from "./Components/Form/Form";
 import TheList from "./Components/TheList/TheList";
 import { v4 as uuidv4 } from "uuid";
@@ -26,11 +26,26 @@ export default function App() {
   const handleDelete = (id) => {
     const newtoDoList = taskContainer.filter((task) => task.id !== id);
     setTaskContainer(newtoDoList);
+    localStorage.setItem('tasks', JSON.stringify(newtoDoList));
   };
 
   const handleModify = (e) => {
     setModifiedValue(e.target.value);
   };
+
+  useEffect(() => {
+    if (taskContainer.length > 0) {
+      localStorage.setItem("tasks", JSON.stringify(taskContainer));
+    }
+  }, [taskContainer]);
+
+  useEffect(() => {
+    const savedTasks = localStorage.getItem("tasks");
+    if (savedTasks) {
+      setTaskContainer(JSON.parse(savedTasks));
+    }
+  }, []);
+
   return (
     <div className="App">
       <section className="Main-container">
